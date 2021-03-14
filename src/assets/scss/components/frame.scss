@@ -1,0 +1,24 @@
+.frame {
+    width: 698px;
+    height: 524px;
+    position: relative;
+    background-color: #fcebd5;
+}
+
+.frame *,
+.frame *::before,
+.frame *::after {
+    position: absolute;
+    content: '';
+}
+
+.frame *,
+.frame *::before,
+.frame *::after {
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 0px 0px 0px 0px;
+}

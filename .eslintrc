@@ -1,0 +1,41 @@
+{
+    "extends": ["airbnb", "plugin:vue/recommended", "plugin:jest/recommended", "prettier", "prettier/vue"],
+    "plugins": ["babel", "import", "jsx-a11y", "vue", "prettier"],
+    "parserOptions": {
+        "parser": ["babel-eslint", "vue-eslint-parser"],
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "prettier/prettier": "error",
+        "linebreak-style": "off", // Неправильно работает в Windows.
+        "arrow-parens": "off", // Несовместимо с prettier
+        "object-curly-newline": "off", // Несовместимо с prettier
+        "no-mixed-operators": "off", // Несовместимо с prettier
+        "no-console": "off", // airbnb использует предупреждение
+        "no-alert": "error", // airbnb использует предупреждение
+        "function-paren-newline": "off", // Несовместимо с prettier
+        "no-plusplus": "off",
+        "space-before-function-paren": 0, // Несовместимо с prettier
+        "import/no-unresolved": "off",
+        "vue/name-property-casing": ["error", "kebab-case"],
+        "vue/attribute-hyphenation": ["error", "never"],
+        "vue/require-default-prop": "off",
+        "max-len": ["error", { "ignoreUrls": true }]
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jest": true,
+        "es6": true
+    },
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "base": "./webpack.base.config.js",
+                "dev": "./webpack.dev.config.js",
+                "prod": "./webpack.prod.config.js"
+            }
+        }
+    }
+}

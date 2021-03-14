@@ -1,0 +1,8 @@
+/.git
+/.vscode
+node_modules/*
+build/*
+webpack.base.config.js
+webpack.dev.config.js
+webpack.prod.config.js
+README.md
